@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a.active {
+  color: #38bdf8;
+}
+
+.nav a:hover {
+  color: #38bdf8;
+}
+
+/* MAIN */
+main {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(30, 41, 59, 0.6);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  font-size: 40px;
+}
+
+/* CARD */
+.card {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 30px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* LOADING */
+.loading-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-top: 5px solid #38bdf8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px auto;
+}
+
+/* ERROR */
+.error-box {
+  text-align: center;
+  padding: 40px;
+  background: rgba(220, 38, 38, 0.1);
+  border-radius: 16px;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+/* ANIMATION */
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
